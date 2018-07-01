@@ -37,7 +37,7 @@ serverSock.on('error', function(err) {
 });
 
 /* listen for the user connections */
-serverSock.listen(SERVER_PORT, SERVER_HOST, () => {
+serverSock.listen(SERVER_PORT, SERVER_HOST, function() {
     console.log('Server listening on %s:%d', SERVER_HOST, SERVER_PORT);
 });
 
@@ -47,17 +47,17 @@ function clientConnected(clientSocket) {
         clientSocket.end();
     }
 
-    clientSocket.on('error', (err) => {
+    clientSocket.on('error', function(err) {
         clientSocket.destroy(err);
     });
 
-    clientSocket.on('data', (buffer) => {
+    clientSocket.on('data', function(buffer) {
         /* broadcast the message to all other users */
         broadcastMessage(clientSocket, buffer);
     });
 
     /* user closes the connection, remoe the user from the list*/
-    clientSocket.on('end', () => {
+    clientSocket.on('end', function() {
         /* remove the user from the list */
         userList.splice(userList.indexOf(clientSocket), 1);
     });

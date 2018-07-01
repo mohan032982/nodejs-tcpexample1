@@ -25,7 +25,7 @@ const net = require('net');
 if (process.argv[2])
     userName = process.argv[2];
 
-const socket = net.createConnection(SERVER_PORT, SERVER_HOST, () => {
+const socket = net.createConnection(SERVER_PORT, SERVER_HOST, function() {
     socket.on('data', function(message) {
         process.stdout.write("\n" + message);
         process.stdout.write(PROMT);
