@@ -1,12 +1,12 @@
 # nodejs-tcpgroupchat1
-##Nodejs tcp server and client example
+## Nodejs tcp server and client example
 
 This is a simple tcp server and client implementation using nodejs API. This just uses basic nodejs 'net' API.
 
 #Prerequites for running server and client
 You just need to install nodejs on your machine.
 
-##Starting Server
+## Starting Server
 
 Run the following command on the terminal
 
@@ -23,7 +23,7 @@ Server listening on 127.0.0.1:8765
 
 Server will bydefault listen on 127.0.0.1, a loopback interface. If you want to change to any other address(you should be to accept connections from other hosts) change SERVER_HOST in the groupChatServer.js to which ever the address you want, also the port number 8765 to something else if you want.
 
-##Starting Client
+## Starting Client
 Now the server is listening for user connections, start client on the other terminal.
 
 start the client as follows.
