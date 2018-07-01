@@ -3,7 +3,7 @@
 
 This is a simple tcp server and client implementation using nodejs API. This just uses basic nodejs 'net' API.
 
-#Prerequites for running server and client
+## Prerequites for running server and client
 You just need to install nodejs on your machine.
 
 ## Starting Server
